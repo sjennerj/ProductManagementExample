@@ -1,0 +1,4 @@
+<div *ngIf="product">
+  <h1>Update {{product.Number}}</h1>
+  <app-product-form [product]="product" (validSubmit)="save(product)" (goBack)="goBack()" (delete)="delete(product)"></app-product-form>
+</div>

@@ -1,0 +1,32 @@
+<h1>Products</h1>
+<div class="row">
+  <div class="col-xs-12 col-sm-8">
+    <a class="btn btn-primary" [routerLink]="['new']">Create new</a>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <label class="pull-right">
+      Show Archived
+      <input type="checkbox" [(ngModel)]="showArchived" (change)="ngOnInit()">
+    </label>
+  </div>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Product Number</th>
+      <th scope="col">Price</th>
+      <th scope="col">Description</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products | async">
+      <td scope="row">{{ product.Number }}</td>
+      <td>{{ product.Price | currency }}</td>
+      <td>{{ product.Description }}</td>
+      <td>
+        <a [routerLink]="['product', product.ID]">Edit</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
