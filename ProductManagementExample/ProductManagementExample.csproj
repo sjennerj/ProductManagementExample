@@ -174,7 +174,6 @@
     <Compile Include="UnityResolver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Connection.config" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -182,6 +181,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="ProductDbSchema.sql" />
     <Content Include="ProductManagementModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ProductManagementModel.edmx</DependentUpon>
